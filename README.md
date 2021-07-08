@@ -18,7 +18,7 @@ SO THAT I can organize my expenses and know how much money I will have remaining
 
 
 ## New technology used in the project are as follows:
-NPM Passport
+Chart JS
 
 ## Visual Mockup
 
