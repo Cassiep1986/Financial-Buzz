@@ -24,7 +24,11 @@ NPM Passport
 
 The following shows the application's intended user interface.
 
-![Financial Buzz Pic](./)
+![Financial Buzz Pic](./img/financialBuzz1.png)
+![Financial Buzz Pic](./img/financialBuzz2.png)
+![Financial Buzz Pic](./img/financialBuzz3.png)
+![Financial Buzz Pic](./img/financialBuzz4.png)
+
 
 
 ## Tasks:
