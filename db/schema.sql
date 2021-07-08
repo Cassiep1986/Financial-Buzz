@@ -1,3 +1,4 @@
-CREATE DATABASE user_db
+DROP DATABASE user_db;
+CREATE DATABASE user_db;
 
-USE DATABASE user_db
+USE DATABASE user_db;
