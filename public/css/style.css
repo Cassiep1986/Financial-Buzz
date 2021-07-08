@@ -1,0 +1,16 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Clarendon', 'Ariel';
+
+
+};
+
+.header {
+    font-size: 100px;
+    font-weight: bold;
+    color: pink;
+};
+
+h2 {
+    color:red;
+};
