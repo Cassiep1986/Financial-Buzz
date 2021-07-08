@@ -29,7 +29,6 @@ The following shows the application's intended user interface.
 ![Financial Buzz Pic](./img/financialBuzz3.png)
 ![Financial Buzz Pic](./img/financialBuzz4.png)
 
-added note for test
 
 ## Tasks:
 The following is a rough breakdown of tasks to be completed for this project: 
