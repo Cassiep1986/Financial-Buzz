@@ -31,7 +31,10 @@ The following shows the application's intended user interface.
 The following is a rough breakdown of tasks to be completed for this project: 
 
 Create the following directories:
+
 Config (connection.js for authentication using sequelize and dotenv).
+
 Controllers (Route Js files (in proper nesting format).
+
 Db (for schema.sql).
 
