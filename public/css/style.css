@@ -1,15 +1,26 @@
-body {
-    background-color: aliceblue;
-    font-family: 'Clarendon', 'Ariel';
-
-
+* {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.header {
+body {
+    background-color: rgb(243, 239, 217);
+}
+
+header {
     font-weight: bold;
     text-align: Center;
-    
+    background-color: rgb(156, 211, 156);
 }
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  
+}
+
+ .financialBuzz:hover {
+ color: white;
+}
+
 
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
@@ -26,13 +37,27 @@ header, .project:not(:last-child) {
   }
   
   .no-button:hover {
-    color: #065b83;
+    color: #000000;
     text-decoration: underline;
   }
   
   .dollar-amount {
-    color: #056605;
+    color: #606605;
     font-weight: bold;
     margin-left: -5px;
   }
   
+.beeLogo {
+  height: 50px;
+  width: 50px;
+}
+.loginHeader {
+
+    position: absolute;
+    right: 30px;
+    top: 25px;
+
+}
+.loginHeader:hover {
+  color: white;
+}
