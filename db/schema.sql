@@ -1,4 +1,5 @@
-DROP DATABASE user_db;
-CREATE DATABASE user_db;
+-- Needs rename
+DROP DATABASE crowdfund_db;
+CREATE DATABASE crowdfund_db;
 
-USE DATABASE user_db;
+USE DATABASE crowdfund_db;
