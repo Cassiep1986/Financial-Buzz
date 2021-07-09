@@ -14,8 +14,8 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        // If successful, redirect the browser to the profile page
-        document.location.replace('/profile');
+        // If successful, redirect the browser to the addBudget page
+        document.location.replace('/addBudget');
       } else {
         alert(response.statusText);
       }
@@ -37,7 +37,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/addBudget');
       } else {
         alert(response.statusText);
       }
