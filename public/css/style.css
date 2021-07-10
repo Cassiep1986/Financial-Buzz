@@ -37,6 +37,7 @@ header, .project:not(:last-child) {
   }
   
   .no-button:hover {
+
     color: #000000;
     text-decoration: underline;
   }
