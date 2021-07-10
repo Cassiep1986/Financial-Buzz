@@ -1,4 +1,2 @@
--- Needs rename
-DROP DATABASE crowdfund_db;
-CREATE DATABASE crowdfund_db;
-
+DROP DATABASE IF EXISTS financialbuzz_db;
+CREATE DATABASE financialbuzz_db;
