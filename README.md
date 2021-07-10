@@ -45,7 +45,7 @@ The following is a rough breakdown of tasks to be completed for this project:
 
 - Public (css file/directiory, js directory with (login and logout js files))
 
-- Seeds (?)
+- Seeds 
 
 - utils (auth and helpers js express session and cookies) ?
 
