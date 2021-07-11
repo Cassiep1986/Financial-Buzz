@@ -18,6 +18,7 @@ header a {
   text-decoration: none;
 
 }
+
 .financialBuzz {
   font-family: 'Open Sans', sans-serif;
 }
@@ -31,7 +32,20 @@ header a {
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
-  
+ 
+footer {
+  font-weight: bold;
+  text-align: Center;
+  background-color: rgb(156, 211, 156);
+  height: 60px; 
+}
+
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+
+}
+
   .no-button {
     background: none;
     border: none;
@@ -109,4 +123,12 @@ header, .project:not(:last-child) {
     height: 275px;
     /* transform: skew(20deg); */
     background:linear-gradient(rgb(224,224,224),rgb(243, 239, 217));
+  }
+
+  .navbar-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
   }

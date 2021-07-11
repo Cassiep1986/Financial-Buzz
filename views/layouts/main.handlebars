@@ -33,7 +33,7 @@
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href="/profile">profile</a>
+            <a href="/profile">Profile</a>
             |
             <button class="no-button" id="logout">logout</button>
           {{else}}
@@ -45,15 +45,19 @@
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
-      <footer>
-
-      </footer>
     </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
+      <footer class="navbar-bottom">
+        <nav> 
+          <a href="/about">About us</a>
+        </nav>
+      </footer>
+
   </body>
 
 </html>
