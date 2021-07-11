@@ -86,11 +86,9 @@ footer a {
 
 
   #pcontainer{
-      position: absolute;
+      position: relative;
       margin-top: 80px;
-      margin-left: 50px;
-
-
+      background:linear-gradient(rgb(156, 211, 156),rgb(224,224,224),rgb(243, 239, 217));
   }
 
   #hlanding {
@@ -132,3 +130,4 @@ footer a {
     left: 0;
     z-index: 1030;
   }
+
