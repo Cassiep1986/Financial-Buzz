@@ -1,14 +1,10 @@
-/* * {
-  font-family: 'Open Sans', sans-serif;
-} */
-
 body {
     background-color: rgb(243, 239, 217);
     font-family: 'libre baskerville', 'Helvetica Neue', Arial, sans-serif;
 }
 
 header {
-    font-weight: bold;
+
     text-align: Center;
     background-color: rgb(156, 211, 156);
 }
@@ -16,8 +12,20 @@ header {
 header a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  font-weight: bold;
 
 }
+
+#main-nav {
+  text-align: right;
+  color: rgb(0, 0, 0);
+  
+}
+
+#main-nav a:hover {
+  color: white;
+}
+
 
 .financialBuzz {
   font-family: 'Open Sans', sans-serif;
@@ -33,6 +41,8 @@ header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
  
+
+
 footer {
   font-weight: bold;
   text-align: Center;
@@ -46,21 +56,24 @@ footer a {
 
 }
 
+footer a:hover {
+  color:white;
+}
+
   .no-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #1b89bc;
     text-decoration: none;
     font-size: 100%;
+    font-weight: bold;
   }
-  
+
   .no-button:hover {
-    color: #000000;
-    text-decoration: underline;
+    color: white;
   }
-  
+
   .dollar-amount {
     color: #606605;
     font-weight: bold;
@@ -73,7 +86,6 @@ footer a {
 }
 
 .loginHeader {
-
     position: absolute;
     right: 30px;
     top: 25px;
@@ -116,10 +128,17 @@ footer a {
     margin-left: 825px;
   }
 
+  #budgetBtn{
+    position: relative;
+    left: 470px;
+    border: 3px solid;
+    font-family: 'Source sans pro';
+    border-radius: 12px;
+  }
+
   .homebackground {
     width: 640px;
     height: 275px;
-    /* transform: skew(20deg); */
     background:linear-gradient(rgb(224,224,224),rgb(243, 239, 217));
   }
 
