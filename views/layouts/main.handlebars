@@ -30,14 +30,14 @@
           <a class="financialBuzz" href="/">Financial Buzz</a>
           <img class="beeLogo" src="/img/moneyBee.png" alt="bee" />
         </h1>
-        <nav>
+        <nav id= "main-nav">
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href="/profile">Profile</a>
+            <a href="/profile">My Budget</a>
             |
-            <button class="no-button" id="logout">logout</button>
+            <button class="no-button" id="logout">Logout</button>
           {{else}}
-            <a class="loginHeader" href="/login">login</a>
+            <a class="loginHeader" href="/login">Login</a>
           {{/if}}
         </nav>
       </header>
@@ -52,11 +52,11 @@
       <script src="/js/logout.js"></script>
     {{/if}}
 
-      <footer class="navbar-bottom">
+      {{!-- <footer class="navbar-bottom">
         <nav> 
           <a href="/about">About us</a>
         </nav>
-      </footer>
+      </footer> --}}
 
   </body>
 

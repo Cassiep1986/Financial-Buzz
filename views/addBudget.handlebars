@@ -13,17 +13,17 @@
         <h4>Expenses</h4>
         <form>
           <div class="mb-3">
-            <label for="expense" class="form-label">Expense name</label>
-            <input type="text" class="form-control" id="expense" aria-describedby="expenseExample">
-          <div id="expenseExample" class="form-text">Rent, Cable, Groceries etc.</div>
+            <label for="expense-name" class="form-label">Expense name</label>
+            <input type="text" class="form-control" id="expense-name" name="expense-name">
+          <div id="expense" class="form-text">Rent, Cable, Groceries etc.</div>
       </div>
           <div class="mb-3">
             <label for="amount" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="amount">
+            <input type="number" class="form-control" id="amount" name="amount">
           </div>
           <div class="mb-3">
             <label for="date" class="form-label">Due Date</label>
-            <input type="date" class="form-control" id="date">
+            <input type="date" class="form-control" id="date" name="date">
           </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
@@ -32,18 +32,35 @@
       <h4>Income</h4>
         <form>
           <div class="mb-3">
-            <label for="incomename" class="form-label">Income name</label>
-            <input type="text" class="form-control" id="incomename" aria-describedby="incomename">
-          <div id="incomename" class="form-text">My Paycheck, Retirement check etc. </div>
+            <label for="income-name" class="form-label">Income name</label>
+            <input type="text" class="form-control" id="income-name" name="income-name">
+          <div id="income" class="form-text">My Paycheck, Retirement check etc. </div>
     </div>
           <div class="mb-3">
             <label for="amount2" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="amount2">
+            <input type="number" class="form-control" id="amount2" name="amount2">
           </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
   </div>
 </div>
 
+ {{#if expense.length}}
+  <div class="col-md-6 expense-list">
+    <h3>Expenses:</h3>
 
-<script src="./js/addBudget.js"></script>
+    {{#each expense as |expense|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a {{expense.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+{{!-- <script src="./js/addBudget.js"></script> --}}
