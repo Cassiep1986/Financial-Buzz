@@ -1,7 +1,7 @@
 [
   {
-    "expenseName": "Mortage",
-    "expenseDate": 3,
-    "expenseAmount": 5000
+    "name": "Mortage",
+    "due_date": "01/12/2021",
+    "amount": 5000
   }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "incomeName":"Job",
-        "incomeAmount": 1232
+        "name":"Job",
+        "amount": 1232
     }
 ]
