@@ -1,9 +1,10 @@
-* {
+/* * {
   font-family: 'Open Sans', sans-serif;
-}
+} */
 
 body {
     background-color: rgb(243, 239, 217);
+    font-family: 'libre baskerville', 'Helvetica Neue', Arial, sans-serif;
 }
 
 header {
@@ -11,11 +12,16 @@ header {
     text-align: Center;
     background-color: rgb(156, 211, 156);
 }
+
 header a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  
+
 }
+.financialBuzz {
+  font-family: 'Open Sans', sans-serif;
+}
+
 
  .financialBuzz:hover {
  color: white;
@@ -51,6 +57,7 @@ header, .project:not(:last-child) {
   height: 50px;
   width: 50px;
 }
+
 .loginHeader {
 
     position: absolute;
@@ -58,17 +65,48 @@ header, .project:not(:last-child) {
     top: 25px;
 
 }
+
 .loginHeader:hover {
   color: white;
 }
 
-@media {
-  .container{
-      width: 588px;
+
+  #pcontainer{
       position: absolute;
       margin-top: 80px;
       margin-left: 50px;
-      border-color: rgb(156, 211, 156);
-      border-style: ridge;
 
+
+  }
+
+  #hlanding {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
+    text-align: center;
+
+  }
+
+  #hcontainer{
+    width: 598px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 100px;
+
+  }
+
+  #homep {
+    margin-left: 50px;
+    font-size: 19px;
+  }
+
+  #startbtn{
+    position: relative;
+    margin-left: 825px;
+  }
+
+  .homebackground {
+    width: 640px;
+    height: 275px;
+    /* transform: skew(20deg); */
+    background:linear-gradient(rgb(224,224,224),rgb(243, 239, 217));
   }
