@@ -61,3 +61,14 @@ header, .project:not(:last-child) {
 .loginHeader:hover {
   color: white;
 }
+
+@media {
+  .container{
+      width: 588px;
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 50px;
+      border-color: rgb(156, 211, 156);
+      border-style: ridge;
+
+  }
