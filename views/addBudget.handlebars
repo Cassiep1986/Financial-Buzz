@@ -40,7 +40,23 @@
           </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
+        <div class="col-md-12">
+         <ul class="expList">
+           {{#each expenses}}
+            <li class="expList">
+             Expense name: <span class="income">{{expense_name}}</span><br>
+             Expense Type: <span class="income">{{expense_type}}</span><br>
+             Expense Amount: $<span class="income">{{amount}}</span><br>
+             Expense Date:<span class="income"> {{date}}</span>
+
+            </li>
+           {{/each}}
+         </ul>
+
+  </div>
     </div>
+
+
     <div class="col-md-4">
       <h4>Income</h4>
       <br>
@@ -60,36 +76,24 @@
           </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
-  </div>
-  <div class="col-md-4">
-         <ul>
-           {{#each expenses}}
-            <li>
-             Expense name: {{expense_name}} <br>
-             Expense Type: {{expense_type}}  <br>
-             Expense Amount:  {{amount}} <br>
-             Expense Date: {{date}}
+         <div class="col-md-12">
+         <ul class="incomeList">
+           {{#each income}}
+            <li class="incomeList">
+             Income Name: <span class="income">{{name}}</span><br>
+             Income Amount: $<span class="income">{{amount}}</span><br>
+             Income date: <span class="income">{{date}}</span> 
 
             </li>
            {{/each}}
          </ul>
 
+  </div>
+  
   </div>
 </div>
 
-  <div class="col-md-4">
-         <ul>
-           {{#each income}}
-            <li>
-             Income Name: {{name}} <br>
-             Income Amount: {{amount}}  <br>
-             Income date:  {{date}}
-
-            </li>
-           {{/each}}
-         </ul>
-
-  </div>
+ 
 </div>
 
  {{!-- {{#if expense.length}}
