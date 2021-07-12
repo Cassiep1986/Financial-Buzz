@@ -1,7 +1,8 @@
 [
   {
-    "name": "Mortage",
+    "expense_name": "Mortage",
     "due_date": "01/12/2021",
-    "amount": 5000
+    "amount": 5000,
+    "expense_type": "Housing"
   }
 ]
