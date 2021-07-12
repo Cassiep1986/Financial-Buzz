@@ -27,16 +27,16 @@ const expenseFormHandler = async (event) => {
   const incomeFormHandler = async (event) => {
     event.preventDefault();
   
-    const income_name = document.querySelector('#income-name').value.trim();
+    const name = document.querySelector('#income-name').value.trim();
     
     const amount = document.querySelector('#amount2').value.trim();
 
     const date = document.querySelector('#paydate').value.trim();
   
-    if (income_name && amount && date) {
+    if (name && amount && date) {
       const response = await fetch(`/api/income`, {
         method: 'POST',
-        body: JSON.stringify({ income_name, amount, date }),
+        body: JSON.stringify({ name, amount, date }),
         headers: {
           'Content-Type': 'application/json',
         },
