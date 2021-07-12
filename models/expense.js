@@ -15,7 +15,11 @@ Expense.init(
         type: DataTypes.FLOAT,
         allowNull: false,
       },
-    name: {
+    expense_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    expense_type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
