@@ -34,7 +34,7 @@ const expenseFormHandler = async (event) => {
     const date = document.querySelector('#paydate').value.trim();
   
     if (income_name && amount && date) {
-      const response = await fetch(`/api/expenses`, {
+      const response = await fetch(`/api/income`, {
         method: 'POST',
         body: JSON.stringify({ income_name, amount, date }),
         headers: {
