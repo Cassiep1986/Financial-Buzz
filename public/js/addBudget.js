@@ -2,13 +2,15 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const expense_name = document.querySelector('#expense-name').value.trim();
+    const expense_type = document.querySelector('.form-select').value.trim();
+    
     const amount = document.querySelector('#amount').value.trim();
     const date = document.querySelector('#date').value.trim();
   
-    if (expense_name && amount && date) {
-      const response = await fetch(`/api/profile`, {
+    if (expense_name && expense_type && amount && date) {
+      const response = await fetch(`/api/expenses`, {
         method: 'POST',
-        body: JSON.stringify({ expense_name, amount, date }),
+        body: JSON.stringify({ expense_name,expense_type, amount, date }),
         headers: {
           'Content-Type': 'application/json',
         },

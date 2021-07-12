@@ -126,6 +126,8 @@ footer a:hover {
   #startbtn{
     position: relative;
     margin-left: 825px;
+    font-family: 'Source sans pro';
+    border-radius: 12px;
   }
 
   #budgetBtn{
@@ -150,3 +152,27 @@ footer a:hover {
     z-index: 1030;
   }
 
+  .loginheaders {
+    margin-left: 132;
+    font-weight: bold;
+  }
+
+  .loginBtn {
+    margin-top:30;
+    margin-left:140;
+    font-family: 'Source sans pro';
+    border-radius: 12px;
+    width:75px;
+  }
+
+  .signupBtn {
+    margin-top:30;
+    margin-left: 143px;
+    font-family: 'Source sans pro';
+    border: 3px solid;
+    border-radius: 12px;
+  }
+
+  .login-container {
+    margin-left: 175;
+  }
