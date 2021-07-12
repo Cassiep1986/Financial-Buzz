@@ -28,7 +28,7 @@ Expense.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    due_date: {
+    date: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW,

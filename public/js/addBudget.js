@@ -3,7 +3,6 @@ const expenseFormHandler = async (event) => {
   
     const expense_name = document.querySelector('#expense-name').value.trim();
     const expense_type = document.querySelector('.form-select').value.trim();
-    
     const amount = document.querySelector('#amount').value.trim();
     const date = document.querySelector('#date').value.trim();
   
