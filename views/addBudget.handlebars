@@ -12,7 +12,7 @@
       <div class="col-md-4">
         <h4>Expenses</h4>
         <br>
-        <form class="new-project-form">
+        <form class="expense-form">
           <div class="mb-3">
             <label for="expense-name" class="form-label">Expense name</label>
             <input type="text" class="form-control" id="expense-name" name="expense-name">
@@ -44,7 +44,7 @@
     <div class="col-md-4">
       <h4>Income</h4>
       <br>
-        <form>
+        <form class= "income-form">
           <div class="mb-3">
             <label for="income-name" class="form-label">Income name</label>
             <input type="text" class="form-control" id="income-name" name="income-name">
@@ -53,6 +53,10 @@
           <div class="mb-3">
             <label for="amount2" class="form-label">Amount</label>
             <input type="number" class="form-control" id="amount2" name="amount2">
+          </div>
+          <div class="mb-3">
+            <label for="paydate" class="form-label"> Date</label>
+            <input type="date" class="form-control" id="paydate" name="paydate">
           </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
@@ -63,7 +67,8 @@
             <li>
              Expense name: {{expense_name}} <br>
              Expense Type: {{expense_type}}  <br>
-             Expense Amount:  {{amount}}
+             Expense Amount:  {{amount}} <br>
+             Expense Date: {{date}}
 
             </li>
            {{/each}}
@@ -72,7 +77,22 @@
   </div>
 </div>
 
- {{#if expense.length}}
+  <div class="col-md-4">
+         <ul>
+           {{#each income}}
+            <li>
+             Income name: {{income_name}} <br>
+             Expense Type: {{amount}}  <br>
+             Expense Amount:  {{date}}
+
+            </li>
+           {{/each}}
+         </ul>
+
+  </div>
+</div>
+
+ {{!-- {{#if expense.length}}
   <div class="col-md-6 expense-list">
     <h3>Expenses:</h3>
 
@@ -88,6 +108,6 @@
     {{/each}}
   </div>
   {{/if}}
-</div>
+</div> --}}
 
 <script src="./js/addBudget.js"></script>
