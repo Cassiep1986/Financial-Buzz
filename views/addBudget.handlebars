@@ -11,12 +11,25 @@
     <div class="row">
       <div class="col-md-4">
         <h4>Expenses</h4>
+        <br>
         <form>
           <div class="mb-3">
             <label for="expense-name" class="form-label">Expense name</label>
             <input type="text" class="form-control" id="expense-name" name="expense-name">
           <div id="expense" class="form-text">Rent, Cable, Groceries etc.</div>
-      </div>
+          </div>
+            <label for="expense-type" class="form-label">Expense type</label>
+            <select class="form-select form-select-md mb-3" aria-label=".form-select-md expense-type">
+             <option selected>Choose type</option>
+            <option value="1">Housing</option>
+            <option value="2">Transportation</option>
+            <option value="3">Food</option>
+            <option value="4">Utilities</option>
+            <option value="5">Medical/Healthcare</option>
+            <option value="6">Household Items/Supplies</option>
+            <option value="7">Personal/Entertainment</option>
+            <option value="8">Misc.</option>
+            </select>
           <div class="mb-3">
             <label for="amount" class="form-label">Amount</label>
             <input type="number" class="form-control" id="amount" name="amount">
@@ -30,6 +43,7 @@
     </div>
     <div class="col-md-4">
       <h4>Income</h4>
+      <br>
         <form>
           <div class="mb-3">
             <label for="income-name" class="form-label">Income name</label>
