@@ -12,7 +12,7 @@
       <div class="col-md-4">
         <h4>Expenses</h4>
         <br>
-        <form class="new-project-form">
+        <form class="expense-form">
           <div class="mb-3">
             <label for="expense-name" class="form-label">Expense name</label>
             <input type="text" class="form-control" id="expense-name" name="expense-name">
@@ -21,14 +21,14 @@
             <label for="expense-type" class="form-label">Expense type</label>
             <select class="form-select form-select-md mb-3" aria-label="form-select-md expense-type">
              <option selected>Choose type</option>
-            <option value="1">Housing</option>
-            <option value="2">Transportation</option>
-            <option value="3">Food</option>
-            <option value="4">Utilities</option>
-            <option value="5">Medical/Healthcare</option>
-            <option value="6">Household Items/Supplies</option>
-            <option value="7">Personal/Entertainment</option>
-            <option value="8">Misc.</option>
+            <option value="Housing">Housing</option>
+            <option value="Transportation<">Transportation</option>
+            <option value="Food">Food</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Medical/Healthcare">Medical/Healthcare</option>
+            <option value="Household Items/Supplies">Household Items/Supplies</option>
+            <option value="Personal/Entertainment">Personal/Entertainment</option>
+            <option value="Misc.">Misc.</option>
             </select>
           <div class="mb-3">
             <label for="amount" class="form-label">Amount</label>
@@ -44,7 +44,7 @@
     <div class="col-md-4">
       <h4>Income</h4>
       <br>
-        <form>
+        <form class= "income-form">
           <div class="mb-3">
             <label for="income-name" class="form-label">Income name</label>
             <input type="text" class="form-control" id="income-name" name="income-name">
@@ -54,6 +54,10 @@
             <label for="amount2" class="form-label">Amount</label>
             <input type="number" class="form-control" id="amount2" name="amount2">
           </div>
+          <div class="mb-3">
+            <label for="paydate" class="form-label"> Date</label>
+            <input type="date" class="form-control" id="paydate" name="paydate">
+          </div>
           <button type="submit" class="btn btn-success">Add</button>
         </form>
   </div>
@@ -61,9 +65,10 @@
          <ul>
            {{#each expenses}}
             <li>
-             expense name:   {{expense_name}} <br>
-              {{expense_type}}  <br>
-              {{amount}}
+             Expense name: {{expense_name}} <br>
+             Expense Type: {{expense_type}}  <br>
+             Expense Amount:  {{amount}} <br>
+             Expense Date: {{date}}
 
             </li>
            {{/each}}
@@ -72,7 +77,22 @@
   </div>
 </div>
 
- {{#if expense.length}}
+  <div class="col-md-4">
+         <ul>
+           {{#each income}}
+            <li>
+             Income name: {{income_name}} <br>
+             Expense Type: {{amount}}  <br>
+             Expense Amount:  {{date}}
+
+            </li>
+           {{/each}}
+         </ul>
+
+  </div>
+</div>
+
+ {{!-- {{#if expense.length}}
   <div class="col-md-6 expense-list">
     <h3>Expenses:</h3>
 
@@ -88,6 +108,6 @@
     {{/each}}
   </div>
   {{/if}}
-</div>
+</div> --}}
 
 <script src="./js/addBudget.js"></script>

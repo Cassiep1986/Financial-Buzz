@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const expenseFormHandler = async (event) => {
     event.preventDefault();
   
     const expense_name = document.querySelector('#expense-name').value.trim();
@@ -24,29 +24,57 @@ const newFormHandler = async (event) => {
     }
   };
 
+  const incomeFormHandler = async (event) => {
+    event.preventDefault();
   
+    const income_name = document.querySelector('#income-name').value.trim();
+    
+    const amount = document.querySelector('#amount2').value.trim();
+
+    const date = document.querySelector('#paydate').value.trim();
   
-//   const delButtonHandler = async (event) => {
-//     if (event.target.hasAttribute('data-id')) {
-//       const id = event.target.getAttribute('data-id');
+    if (income_name && amount && date) {
+      const response = await fetch(`/api/income`, {
+        method: 'POST',
+        body: JSON.stringify({ income_name, amount, date }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
   
-//       const response = await fetch(`/api/projects/${id}`, {
-//         method: 'DELETE',
-//       });
-  
-//       if (response.ok) {
-//         document.location.replace('/profile');
-//       } else {
-//         alert('Failed to delete project');
-//       }
-//     }
-//   };
-  
-// querySelectors need to be adjusted
-document
-    .querySelector('.new-project-form')
-    .addEventListener('submit', newFormHandler);
+      if (response.ok) {
+        document.location.replace('/addBudget');
+      } else {
+        alert('Failed to add expense');
+      }
+    }
+  };
   
   document
-    .querySelector('.project-list')
-    .addEventListener('click', delButtonHandler);
+  .querySelector('.expense-form')
+  .addEventListener('submit', expenseFormHandler);
+  
+  document
+  .querySelector('.income-form')
+  .addEventListener('submit', incomeFormHandler);
+  
+    
+
+  
+    
+  //   const delButtonHandler = async (event) => {
+  //     if (event.target.hasAttribute('data-id')) {
+  //       const id = event.target.getAttribute('data-id');
+    
+  //       const response = await fetch(`/api/projects/${id}`, {
+  //         method: 'DELETE',
+  //       });
+    
+  //       if (response.ok) {
+  //         document.location.replace('/profile');
+  //       } else {
+  //         alert('Failed to delete project');
+  //       }
+  //     }
+  //   };
+    

@@ -25,7 +25,7 @@ document.location.replace('/addBudget')
 //     });
 
 //     if (response.ok) {
-//       document.location.replace('/profile');
+//       document.location.replace('/myBudget');
 //     } else {
 //       alert('Failed to create project');
 //     }
@@ -41,7 +41,7 @@ document.location.replace('/addBudget')
 //     });
 
 //     if (response.ok) {
-//       document.location.replace('/profile');
+//       document.location.replace('/myBudget');
 //     } else {
 //       alert('Failed to delete project');
 //     }
