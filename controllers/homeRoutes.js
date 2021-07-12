@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/myBudget', async (req, res) => {
   try {
-    res.render('profile', {
+    res.render('myBudget', {
       // ...project,
       logged_in: req.session.logged_in
     });
