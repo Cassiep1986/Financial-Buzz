@@ -37,7 +37,7 @@ header a {
 }
 
 
-header, .project:not(:last-child) {
+header, .:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
  

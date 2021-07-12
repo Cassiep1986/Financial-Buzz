@@ -1,5 +1,4 @@
 const User = require('./User');
-const Project = require('./Project');
 const Income = require('./income');
 const Expense = require('./expense');
 
@@ -14,10 +13,6 @@ User.hasMany(Expense, {
   onDelete: 'CASCADE'
 });
 
-User.hasMany(Project, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
 
 Income.belongsTo(User, {
   foreignKey: 'user_id',
@@ -29,9 +24,4 @@ Expense.belongsTo(User, {
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
-
-module.exports = { User, Project, Income, Expense };
+module.exports = { User, Income, Expense };
