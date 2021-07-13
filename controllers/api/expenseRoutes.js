@@ -10,4 +10,17 @@ router.post("/", (req, res)=>{
     })
 })
 
+router.get("/", (req, res) =>{
+    console.log("req.session", req.session)
+    Expense.findAll({
+        where:{
+            user_id:req.session.user_id
+        } 
+
+       
+    }).then(results=>{
+        res.json(results)
+    })
+})
+
 module.exports = router

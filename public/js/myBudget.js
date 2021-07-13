@@ -7,6 +7,90 @@ document.location.replace('/addBudget')
 }
 
 
+fetch("/api/expenses")
+.then(function(response){
+  return response.json()
+})
+.then(function(results){
+
+console.log(results)
+
+  
+let myChart = document.getElementById("myChart").getContext("2d");
+
+let housingArray=results.filter(result=>result.expense_type==="Housing")
+
+let totalHousing=0
+housingArray.forEach((value)=>{
+   totalHousing=totalHousing+value.amount
+
+})
+
+
+
+
+
+
+console.log("housing", totalHousing )
+
+let massPopChart = new Chart(myChart, {
+  type: "pie", //bar, horizontal bar, pie, line, doughnut, radar, polarArea
+  data: {
+    labels: [
+      "Housing",
+      "Transportation",
+      "Food",
+      "Utilities",
+      "Medical/Healthcare",
+      "Household Items/Supplies",
+      "Personal/Entertainment",
+      "Misc."
+    ],
+    datasets: [
+      {
+        label: "Population",
+        data: [totalHousing, 1, 15, 1, 12, 72, 12,45],
+        // backgroundColor:"green"
+        backgroundColor: ["green", "blue", "yellow", "teal", "red", "purple"],
+        borderWidth: 1,
+        borderColor: "#777",
+        hoverBorderWidth: 3,
+        hoverBoarderColor: "black",
+      },
+    ],
+  },
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: "Largest Cities in MA",
+        fontsize: 25,
+      },
+      legend:{
+        //display true to show. False to hide.
+        display:true,
+        position:"right",
+        labels:{
+          fontColor:'black',
+        },
+      },
+    },
+  },
+});
+
+})
+
+
+
+
+
+//Global options (Do not work)
+// Chart.defaults.global.defaultFontFamily = "Lato";
+// Chart.defaults.global.defaultFontSize = "18";
+// Chart.defaults.global.defaultFontColor = "grey";
+
+
+
 
 // const newFormHandler = async (event) => {
 //   event.preventDefault();
