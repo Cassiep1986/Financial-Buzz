@@ -4,12 +4,6 @@ body {
   font-family: 'libre baskerville', 'Helvetica Neue', Arial, sans-serif;
 }
 
-header a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: bold;
-}
-
 header {
   width:100vw;
   text-align: Center;
@@ -25,8 +19,17 @@ header {
   color: white;
 }
 
+.navTop {
+color:black;
+}
+.budget {
+  color: black;
+}
+
 .financialBuzz {
   font-family: 'Open Sans', sans-serif;
+  font-size: 36pt;
+  color:white;
 }
 
 .financialBuzz:hover {
@@ -83,6 +86,7 @@ footer a:hover {
   position: absolute;
   right: 30px;
   top: 25px;
+  color:white;
 }
 
 .loginHeader:hover {
@@ -119,11 +123,12 @@ footer a:hover {
 
 
 #budgetBtn {
-  position: relative;
   left: 470px;
   border: 3px solid;
   font-family: 'Source sans pro';
   border-radius: 12px;
+  margin-top: 50px;
+  margin-bottom: -80px;
 }
 
 .homebackground {
