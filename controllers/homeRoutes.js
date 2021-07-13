@@ -33,8 +33,8 @@ router.get('/myBudget', async (req, res) => {
       include: [Expense, Income],
     });
     const { Expenses, Incomes } = userData.get({ plain: true });
-    const totalExpenses = Expenses.map((i) => i.amount).reduce((a, b) => a + b);
-    const totalIncomes = Incomes.map((i) => i.amount).reduce((a, b) => a + b);
+    const totalExpenses = Expenses.map((i) => i.amount).reduce((a, b) => a + b,0);
+    const totalIncomes = Incomes.map((i) => i.amount).reduce((a, b) => a + b,0);
 
 
     res.render('myBudget', {
@@ -44,6 +44,7 @@ router.get('/myBudget', async (req, res) => {
       totalIncomes,
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
