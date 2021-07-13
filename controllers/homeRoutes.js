@@ -28,11 +28,21 @@ router.get('/', async (req, res) => {
 
 router.get('/myBudget', async (req, res) => {
   try {
+
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [Expense, Income],
+    });
+    const { Expenses, Incomes } = userData.get({ plain: true });
+    const totalExpenses = Expenses.map((i) => i.amount).reduce((a, b) => a + b,0);
+    const totalIncomes = Incomes.map((i) => i.amount).reduce((a, b) => a + b,0);
+
     res.render('myBudget', {
       // ...project,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -45,7 +55,7 @@ router.get('/addBudget', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [ Expense, Income ],
     });
-// ======================================= 
+    
     const user = userData.get({ plain: true });
 console.log(user)
     res.render('addBudget', {
@@ -58,7 +68,7 @@ console.log(user)
     res.status(500).json(err);
   }
 });
-// ==================================================
+
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
