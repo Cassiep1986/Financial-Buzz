@@ -1,96 +1,112 @@
-document.getElementById("budgetBtn").addEventListener("click", navigate);
-
+document.getElementById('budgetBtn').addEventListener('click', navigate);
 
 function navigate() {
-console.log("clicked")
-document.location.replace('/addBudget')
+  console.log('clicked');
+  document.location.replace('/addBudget');
 }
 
+fetch('/api/expenses')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (results) {
+    console.log(results);
 
-fetch("/api/expenses")
-.then(function(response){
-  return response.json()
-})
-.then(function(results){
+    let myChart = document.getElementById('myChart').getContext('2d');
 
-console.log(results)
+    let housingArray = results.filter(
+      (result) => result.expense_type === 'Housing'
+    );
 
-  
-let myChart = document.getElementById("myChart").getContext("2d");
+    let totalHousing = 0;
+    housingArray.forEach((value) => {
+      totalHousing = totalHousing + value.amount;
+      console.log(value.amount)
+    });
+    
 
-let housingArray=results.filter(result=>result.expense_type==="Housing")
+    let transportationArray = results.filter(
+      (result) => result.expense_type === 'Transportation'
+    );
 
-let totalHousing=0
-housingArray.forEach((value)=>{
-   totalHousing=totalHousing+value.amount
+    let totalTransportation = 0;
+    transportationArray.forEach((value) => {
+      transportationArray = transportationArray + value.amount;
+    });
 
-})
+    let foodArray = results.filter(
+      (result) => result.expense_type === 'Food'
+    );
 
+    let totalFood = 0;
+    foodArray.forEach((value) => {
+      foodArray = foodArray + value.amount;
+      console.log(value.amount)
+    });
 
+    console.log('housing', totalHousing);
+    console.log('transportation', totalTransportation);
+    console.log('food', totalFood);
 
-
-
-
-console.log("housing", totalHousing )
-
-let massPopChart = new Chart(myChart, {
-  type: "pie", //bar, horizontal bar, pie, line, doughnut, radar, polarArea
-  data: {
-    labels: [
-      "Housing",
-      "Transportation",
-      "Food",
-      "Utilities",
-      "Medical/Healthcare",
-      "Household Items/Supplies",
-      "Personal/Entertainment",
-      "Misc."
-    ],
-    datasets: [
-      {
-        label: "Population",
-        data: [totalHousing, 1, 15, 1, 12, 72, 12,45],
-        // backgroundColor:"green"
-        backgroundColor: ["green", "blue", "yellow", "teal", "red", "purple"],
-        borderWidth: 1,
-        borderColor: "#777",
-        hoverBorderWidth: 3,
-        hoverBoarderColor: "black",
+    let totalExpensesChart = new Chart(myChart, {
+      type: 'pie', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
+      data: {
+        labels: [
+          'Housing',
+          'Transportation',
+          'Food',
+          'Utilities',
+          'Medical/Healthcare',
+          'Household Items/Supplies',
+          'Personal/Entertainment',
+          'Misc.',
+        ],
+        datasets: [
+          {
+            label: 'Total Cost',
+            data: [totalFood, 50, 100, 1, 12, 72, 12, 45],
+            // backgroundColor:"green"
+            backgroundColor: [
+              'green',
+              'blue',
+              'yellow',
+              'teal',
+              'red',
+              'purple',
+              'orange',
+              'magenta'
+            ],
+            borderWidth: 1,
+            borderColor: '#777',
+            hoverBorderWidth: 3,
+            hoverBoarderColor: 'black',
+          },
+        ],
       },
-    ],
-  },
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: "Largest Cities in MA",
-        fontsize: 25,
-      },
-      legend:{
-        //display true to show. False to hide.
-        display:true,
-        position:"right",
-        labels:{
-          fontColor:'black',
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Expenses by type',
+            fontsize: 25,
+          },
+          legend: {
+            //display true to show. False to hide.
+            display: true,
+            position: 'right',
+            labels: {
+              fontColor: 'black',
+            },
+          },
         },
       },
-    },
-  },
-});
-
-})
-
-
-
-
+    });
+  });
 
 //Global options (Do not work)
 // Chart.defaults.global.defaultFontFamily = "Lato";
 // Chart.defaults.global.defaultFontSize = "18";
 // Chart.defaults.global.defaultFontColor = "grey";
-
-
-
 
 // const newFormHandler = async (event) => {
 //   event.preventDefault();
