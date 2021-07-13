@@ -31,7 +31,7 @@ fetch('/api/expenses')
 
     let totalTransportation = 0;
     transportationArray.forEach((value) => {
-      transportationArray = transportationArray + value.amount;
+      totalTransportation = totalTransportation + value.amount;
     });
 
     let foodArray = results.filter(
@@ -40,7 +40,7 @@ fetch('/api/expenses')
 
     let totalFood = 0;
     foodArray.forEach((value) => {
-      foodArray = foodArray + value.amount;
+      totalFood = totalFood + value.amount;
       console.log(value.amount)
     });
 
@@ -64,7 +64,7 @@ fetch('/api/expenses')
         datasets: [
           {
             label: 'Total Cost',
-            data: [totalFood, 50, 100, 1, 12, 72, 12, 45],
+            data: [totalHousing, 50, 100, 1, 12, 72, 12, 45],
             // backgroundColor:"green"
             backgroundColor: [
               'green',
