@@ -18,8 +18,8 @@ router.get('/', async (req, res) => {
     // const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {  
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -28,9 +28,20 @@ router.get('/', async (req, res) => {
 
 router.get('/myBudget', async (req, res) => {
   try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [Expense, Income],
+    });
+    const { Expenses, Incomes } = userData.get({ plain: true });
+    const totalExpenses = Expenses.map((i) => i.amount).reduce((a, b) => a + b);
+    const totalIncomes = Incomes.map((i) => i.amount).reduce((a, b) => a + b);
+
+
     res.render('myBudget', {
       // ...project,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      totalExpenses,
+      totalIncomes,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -43,16 +54,16 @@ router.get('/addBudget', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [ Expense, Income ],
+      include: [Expense, Income],
     });
-// ======================================= 
+    // =======================================
     const user = userData.get({ plain: true });
-console.log(user)
+    console.log(user);
     res.render('addBudget', {
       ...user,
-      income:user.Incomes,
-      expenses:user.Expenses,
-      logged_in: true
+      income: user.Incomes,
+      expenses: user.Expenses,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
