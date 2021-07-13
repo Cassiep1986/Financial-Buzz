@@ -35,10 +35,7 @@ router.get('/myBudget', async (req, res) => {
     const { Expenses, Incomes } = userData.get({ plain: true });
     const totalExpenses = Expenses.map((i) => i.amount).reduce((a, b) => a + b);
     const totalIncomes = Incomes.map((i) => i.amount).reduce((a, b) => a + b);
-    console.log(Expenses);
-    console.log(totalExpenses);
-    console.log(Incomes);
-    console.log(totalIncomes);
+
 
     res.render('myBudget', {
       // ...project,

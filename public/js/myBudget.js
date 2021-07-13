@@ -44,9 +44,57 @@ fetch('/api/expenses')
       console.log(value.amount)
     });
 
-    console.log('housing', totalHousing);
-    console.log('transportation', totalTransportation);
-    console.log('food', totalFood);
+    let utilitiesArray = results.filter(
+      (result) => result.expense_type === 'Utilities'
+    );
+
+    let totalUtilities = 0;
+    utilitiesArray.forEach((value) => {
+      totalUtilities = totalUtilities + value.amount;
+      console.log(value.amount)
+    });
+
+    let medical_healthcareArray = results.filter(
+      (result) => result.expense_type === 'Medical/Healthcare'
+    );
+
+    let totalMedical_Healthcare = 0;
+    medical_healthcareArray.forEach((value) => {
+      totalMedical_Healthcare = totalMedical_Healthcare + value.amount;
+      console.log(value.amount)
+    });
+
+    let household_Items_SuppliesArray = results.filter(
+      (result) => result.expense_type === 'Household Items/Supplies'
+    );
+
+    let totalHousehold_Items_Supplies = 0;
+    household_Items_SuppliesArray.forEach((value) => {
+      totalHousehold_Items_Supplies = totalHousehold_Items_Supplies + value.amount;
+      console.log(value.amount)
+    });
+
+    let personal_EntertainmentArray = results.filter(
+      (result) => result.expense_type === 'Personal/Entertainment'
+    );
+
+    let totalPersonal_Entertainment = 0;
+    personal_EntertainmentArray.forEach((value) => {
+      totalPersonal_Entertainment = totalPersonal_Entertainment + value.amount;
+      console.log(value.amount)
+    });
+
+    let miscArray = results.filter(
+      (result) => result.expense_type === 'Personal/Entertainment'
+    );
+
+    let totalmisc = 0;
+    miscArray.forEach((value) => {
+      totalmisc = totalmisc + value.amount;
+      console.log(value.amount)
+    });
+
+  
 
     let totalExpensesChart = new Chart(myChart, {
       type: 'pie', //bar, horizontal bar, pie, line, doughnut, radar, polarArea
@@ -64,7 +112,7 @@ fetch('/api/expenses')
         datasets: [
           {
             label: 'Total Cost',
-            data: [totalHousing, 50, 100, 1, 12, 72, 12, 45],
+            data: [totalHousing, totalTransportation, totalFood , totalUtilities, totalMedical_Healthcare, totalHousehold_Items_Supplies, totalPersonal_Entertainment, totalmisc],
             // backgroundColor:"green"
             backgroundColor: [
               'green',
