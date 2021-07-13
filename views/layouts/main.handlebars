@@ -1,9 +1,12 @@
+
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Buzz</title>
+  <link rel="icon" href="/img/moneyBee.png" type="image/png" size="16x16"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
@@ -18,14 +21,15 @@
 </head>
 
 <body>
+  
   <div>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-12">
         <header >
-          <a class="financialBuzz" href="/">Financial Buzz</a>
+          <a class="financialBuzz brand" href="/">Financial Buzz</a>
           <img class="beeLogo" src="/img/moneyBee.png" alt="bee" />
 
-          <nav id="main-nav">
+          <nav >
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
             <a href="/myBudget">My Budget</a>
@@ -41,14 +45,11 @@
 
 
 
-    <main class="  mt-5">
+    <main class="container  mt-5">
       <!-- Render the sub layout -->
       {{{body}}}
     </main>
-
-
   </div>
-
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

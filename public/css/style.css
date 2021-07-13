@@ -1,4 +1,5 @@
 body {
+  width: 100vw;
   background-color: rgb(243, 239, 217);
   font-family: 'libre baskerville', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -10,7 +11,7 @@ header a {
   font-weight: bold;
 }
 header {
-  width:100%;
+  width:100vw;
   text-align: Center;
   background-color: rgb(156, 211, 156);
 }
@@ -202,25 +203,42 @@ footer a:hover {
 
 @media only screen and (max-width: 500px) {
   header {
-    width:135%;
+    width:100%;
   }
   .financialBuzz {
+    margin-right: 20%;
+  }
+  #main-nav {
+    margin-right: 27%;
+  }
+
+}
+@media only screen and (max-width: 400px) {
+  
+  .financialBuzz {
     text-align: center;
+   font-size: 24pt;
   }
   #main-nav {
     margin-right: 10%;
   }
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 375px) {
   header {
-    width:185%;
+    width: 100vw;
   }
   .financialBuzz {
     text-align: center;
+   font-size: 20pt;
   }
   #main-nav {
-    margin-right: 10%;
+    margin-right: 17%;
+    font-size: 8pt;
+  }
+  .beeLogo {
+    width: 25px;
+    height: 25px;
   }
 
 }
