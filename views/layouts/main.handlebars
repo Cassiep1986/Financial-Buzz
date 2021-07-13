@@ -29,16 +29,18 @@
           <a class="financialBuzz brand" href="/">Financial Buzz</a>
           <img class="beeLogo" src="/img/moneyBee.png" alt="bee" />
 
-          <nav >
+          <nav>
+            <div class="navTop">
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <a href="/myBudget">My Budget</a>
+            <a href="/myBudget"><span class="budget">My Budget</span></a>
             |
             <button class="no-button" id="logout">Logout</button>
             {{else}}
             <a class="loginHeader" href="/login">Login</a>
             {{/if}}
           </nav>
+          </div>
         </header>
       </div>
     </div>

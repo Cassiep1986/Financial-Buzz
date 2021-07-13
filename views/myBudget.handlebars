@@ -1,18 +1,21 @@
 <div class="row">
   <div class="col-auto">
     <h2 class="fw-bold">
-      Welcome
-      {{!-- {{name}} --}}
-      !
+      Welcome!
+      <div class="col-md-2">
+      <button type="button" class="btn btn-success" id='budgetBtn'>
+        Add Expenses/Income
+      </button>
+    </div>
     </h2>
   </div>
 </div>
 <div id="pcontainer" class="container rounded bg is-success">
   <h2 class="fw-bold">
-    Monthly Balance Remaining as of (date)
+    Monthly Balance Remaining
   </h2>
   <p>
-    $Balance
+    $1900
   </p>
   <br />
   <div class="row">
@@ -21,6 +24,7 @@
         Income total
       </h5>
       <p>
+        $3150
         {{{totalHousing}}}
       </p>
       <br />
@@ -28,7 +32,7 @@
         Expense total
       </h5>
       <p>
-        $Expense
+        $1250
       </p>
     </div>
     <div class="col-md-4">
@@ -36,11 +40,7 @@
     </div>
   </div>
 </div>
-    <div class="col-md-2">
-      <button type="button" class="btn btn-success" id='budgetBtn'>
-        Add Expenses/Income
-      </button>
-    </div>
+    
 
 
 
