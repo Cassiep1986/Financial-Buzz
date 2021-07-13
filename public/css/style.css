@@ -4,18 +4,17 @@ body {
   font-family: 'libre baskerville', 'Helvetica Neue', Arial, sans-serif;
 }
 
-
 header a {
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
 }
+
 header {
   width:100vw;
   text-align: Center;
   background-color: rgb(156, 211, 156);
 }
-
 
 #main-nav {
   text-align: right;
@@ -118,12 +117,6 @@ footer a:hover {
   font-size: 19px;
 }
 
-#startbtn {
-  position: relative;
-  margin-left: 825px;
-  font-family: 'Source sans pro';
-  border-radius: 12px;
-}
 
 #budgetBtn {
   position: relative;
@@ -136,6 +129,24 @@ footer a:hover {
 .homebackground {
   height: 275px;
   background: linear-gradient(rgb(224, 224, 224), rgb(243, 239, 217));
+}
+.homeBox{
+  background: rgb(156, 211, 156);
+  font-family: Open Sans;
+  font-weight: bold;
+}
+.homeBox2{
+  background: rgb(156, 211, 156);
+  font-family: Open Sans;
+  font-weight: bold;
+}
+
+#startbtn {
+  font-family: 'Open Sans';
+  border-radius: 12px;
+  font-weight: bold;
+  margin-top: 30px;
+  
 }
 
 .navbar-bottom {
@@ -241,4 +252,9 @@ footer a:hover {
     height: 25px;
   }
 
+}
+@media only screen and (min-width: 375px) {
+.homeBox {
+  text-align: center;
+}
 }
