@@ -1,8 +1,62 @@
 [
   {
-    "expense_name": "Mortage",
-    "due_date": "01/12/2021",
-    "amount": 5000,
-    "expense_type": "Housing"
+    "amount": 1500,
+    "expense_name": "Mortgage",
+    "expense_type": "Housing",
+    "date": "2021-07-13T02:51:10.000Z"
+  },
+  {
+    "amount": 200,
+    "expense_name": "Gas",
+    "expense_type": "Transportation",
+    "date": "2021-07-13T02:57:06.000Z"
+  },
+  {
+    "amount": 100,
+    "expense_name": "Take out",
+    "expense_type": "Food",
+    "date": "2021-07-13T02:57:26.000Z"
+  },
+  {
+    "amount": 80,
+    "expense_name": "Water",
+    "expense_type": "Utilities",
+    "date": "2021-07-13T02:57:39.000Z"
+  },
+  {
+    "amount": 250,
+    "expense_name": "Insurance",
+    "expense_type": "Medical/Healthcare",
+    "date": "2021-07-13T02:57:56.000Z"
+  },
+  {
+    "amount": 10,
+    "expense_name": "Toothpase",
+    "expense_type": "Household Items/Supplies",
+    "date": "2021-07-13T02:58:19.000Z"
+  },
+  {
+    "amount": 50,
+    "expense_name": "Movies",
+    "expense_type": "Personal/Entertainment",
+    "date": "2021-07-13T02:58:37.000Z"
+  },
+  {
+    "amount": 25,
+    "expense_name": "Gym",
+    "expense_type": "Misc",
+    "date": "2021-07-13T02:58:52.000Z"
+  },
+  {
+    "amount": 200,
+    "expense_name": "rent",
+    "expense_type": "Housing",
+    "date": "2021-07-13T03:07:35.000Z"
+  },
+  {
+    "amount": 1000,
+    "expense_name": "Bus Fare",
+    "expense_type": "Transportation",
+    "date": "2021-07-24T00:00:00.000Z"
   }
 ]

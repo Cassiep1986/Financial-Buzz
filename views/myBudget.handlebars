@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-auto">
     <h2 class="fw-bold">
-      Welcome,
-      {{name}}
+      Welcome
+      {{!-- {{name}} --}}
       !
     </h2>
   </div>
@@ -16,12 +16,12 @@
   </p>
   <br />
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4">
       <h5 class="fw-bold">
         Income total
       </h5>
       <p>
-        $income
+        {{{totalHousing}}}
       </p>
       <br />
       <h5 class="fw-bold">
@@ -31,19 +31,12 @@
         $Expense
       </p>
     </div>
-    <br />
-    <div class="col-md-5">
-      <h5 class="fw-bold">
-        Upcoming Expenses
-      </h5>
-      <p>
-        Expense, due date
-      </p>
+    <div class="col-md-4">
+       <canvas id ="myChart"></canvas>
     </div>
   </div>
 </div>
     <div class="col-md-2">
-       <canvas id ="myChart"></canvas>
       <button type="button" class="btn btn-success" id='budgetBtn'>
         Add Expenses/Income
       </button>
