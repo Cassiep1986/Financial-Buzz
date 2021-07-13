@@ -39,7 +39,10 @@ router.get('/myBudget', async (req, res) => {
 
     res.render('myBudget', {
       // ...project,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      totalExpenses,
+      totalIncomes
+      
     });
   } catch (err) {
     console.log(err)
