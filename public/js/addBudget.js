@@ -76,4 +76,12 @@ const expenseFormHandler = async (event) => {
   //       }
   //     }
   //   };
+  
+  const form = document.querySelector('#select')
+  form.addEventListener('change', e => console.log(e.target.value))
+  // console.log(form.value);
+//   if (option.value === housing) {
+
     
+    
+// }
